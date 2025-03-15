@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Complaint Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            display: inline-block;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Welcome, {{ session['user'] }}!</h2>
+    <div class="container">
+        <h3>Enter Your Complaint</h3>
+        <form method="POST">
+            <input type="text" name="complaint" placeholder="Type your complaint here..." required><br>
+            <button type="submit">Classify</button>
+        </form>
+    </div>
+
+    {% if complaint %}
+    <h3>Classification Result:</h3>
+    <table>
+        <tr>
+            <th>Complaint</th>
+            <th>Predicted Category</th>
+        </tr>
+        <tr>
+            <td>{{ complaint }}</td>
+            <td>{{ category }}</td>
+        </tr>
+    </table>
+    {% endif %}
+
+    <br>
+    <a href="/logout"><button style="background:red;">Logout</button></a>
+
+</body>
+</html>

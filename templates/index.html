@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Complaint Classifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgb(147, 11, 11);
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .navbar .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color:blue;
+            font-size: 18px;
+        }
+        .navbar .nav-links a:hover {
+            color: #007BFF;
+        }
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            background-color: white; /* Background color of navbar */
+            
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end; 
+        }
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        /* Hero Section */
+        .hero {
+            background: #00a82d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            height: 400px;
+        }
+        .hero .text {
+            max-width: 50%;
+        }
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .hero .go-button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background: white;
+            border: none;
+            color: #00a82d;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero .go-button:hover {
+            background: #f4f4f4;
+        }
+        /* Hero Image */
+        .hero img {
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="text">
+            <h1>Analyze Customer Complaints Effortlessly</h1>
+            <p>Our AI-powered tool helps classify customer complaints, making your business more efficient. Upload your file and get instant results.</p>
+            <button class="go-button" onclick="window.location.href='/upload'">Get Started</button>
+        </div>
+        <img src="https://source.unsplash.com/500x300/?technology,ai" alt="AI Complaint Analysis">
+    </div>
+
+</body>
+</html>
